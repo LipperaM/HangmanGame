@@ -70,9 +70,6 @@ void ShouldPlay()
 //Empezar el juego si el usuario ingreso "jugar".
 void PlayGame()
 {
-    board.Clear();
-    chosenWord = "";
-
     Console.Clear();
     Console.WriteLine("Empecemos!");
     Console.WriteLine("Se te va a asignar una palabra");
@@ -83,6 +80,10 @@ void PlayGame()
 
 void PickWord()
 {
+    board.Clear();
+    chosenWord = "";
+
+
     Random random = new Random();
     int randomNum = random.Next(0, words.Count); //Generar numero random.
     Console.WriteLine(randomNum);
