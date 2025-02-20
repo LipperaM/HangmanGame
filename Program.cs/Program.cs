@@ -33,10 +33,14 @@ List<char> board = new List<char>();
 Console.WriteLine("Bienvenido al juego del ahorcado!");
 do
 {
-    //Console.WriteLine("Ingresa 1 para empezar o 0 para salir.");
-    ShouldPlay();
-
+    StartGame();
 } while (shouldExit != true);
+
+//Saludar.
+void StartGame()
+{
+    ShouldPlay();
+}
 
 //Preguntar si desea jugar.
 void ShouldPlay()
@@ -75,6 +79,7 @@ void PlayGame()
     Console.WriteLine("Se te va a asignar una palabra");
     Thread.Sleep(2000);
     Console.WriteLine("Palabra asignada!");
+
     PickWord();
 }
 
@@ -82,7 +87,6 @@ void PickWord()
 {
     board.Clear();
     chosenWord = "";
-
 
     Random random = new Random();
     int randomNum = random.Next(0, words.Count); //Generar numero random.
@@ -198,7 +202,7 @@ void CompletedWord()
     {
         Console.WriteLine("Completaste la palabra! Seguimos jugando?");
 
-        PickWord();
+        ShouldPlay();
     }
     else
     {
