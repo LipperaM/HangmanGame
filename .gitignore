@@ -1,0 +1,42 @@
+# Archivos y carpetas de Visual Studio
+.vscode/
+bin/
+obj/
+
+# Archivos de dependencias de .NET
+*.dll
+*.exe
+*.pdb
+
+# Archivos temporales
+*.tmp
+*.log
+
+# Archivos generados automáticamente
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos específicos de entornos (como .env)
+.env
+
+# Otros archivos sensibles
+secrets.json
+
+# Ignorar carpetas de dependencias de paquetes
+/node_modules
+/bin
+/obj
+
+# Ignorar archivos de configuración de Visual Studio y VS Code
+.vscode
+.idea
+
+# Ignorar archivos generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Otros archivos de configuración o temporales
+*.log
+*.tmp
